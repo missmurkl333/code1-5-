@@ -2,7 +2,7 @@
 #include <vector>
 #include <Windows.h>
 
-// Функція для обчислення добутку елементів масиву з парними номерами
+
 int product_of_elements_with_even_indices(const std::vector<int>& array) {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
@@ -13,7 +13,7 @@ int product_of_elements_with_even_indices(const std::vector<int>& array) {
     return product;
 }
 
-// Функція для обчислення суми елементів масиву між першим і останнім нульовими елементами
+
 int sum_between_first_and_last_zeros(const std::vector<int>& array) {
     int sum = 0;
     bool found_first_zero = false;
@@ -34,9 +34,9 @@ int sum_between_first_and_last_zeros(const std::vector<int>& array) {
 
     return sum;
 }
-// Функція для перетворення масиву
+
 void transform_array(std::vector<int>& array) {
-    // Розділити масив на додатні і від'ємні елементи
+   
     std::vector<int> positive_elements;
     std::vector<int> negative_elements;
 
@@ -49,14 +49,14 @@ void transform_array(std::vector<int>& array) {
         }
     }
 
-    // Зібрати новий масив, спочатку додатні, потім від'ємні елементи
+    
     array.clear();
     array.insert(array.end(), positive_elements.begin(), positive_elements.end());
     array.insert(array.end(), negative_elements.begin(), negative_elements.end());
 }
 
 int main() {
-    // Приклад використання
+    
     std::vector<int> array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, -3, 0, -4, -5 };
 
     std::cout << "Product of elements with even indices: " << product_of_elements_with_even_indices(array) << std::endl;
